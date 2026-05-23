@@ -1,0 +1,32 @@
+{
+  "name": "recipe-sharing-api",
+  "version": "1.0.0",
+  "description": "First easy project from \"https://projects.masteringbackend.com/projects\"",
+  "homepage": "https://github.com/tartaryoungx/Recipe-Sharing-API#readme",
+  "bugs": {
+    "url": "https://github.com/tartaryoungx/Recipe-Sharing-API/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tartaryoungx/Recipe-Sharing-API.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.22.3",
+    "uuid": "^14.0.0"
+  }
+}
