@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const errorMiddleware = require("./middlewares/error");
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ app.get("/", (req, res) => {
 app.use("/api", authRoutes);
 app.use("/api/users", userRoutes);
 app.use('/api', recipeRoutes)
+app.use(errorMiddleware);
 
 app.listen(port, async () => {
   await initMySQL();

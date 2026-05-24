@@ -1,13 +1,15 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const { getConn } = require("../db");
+const authMiddleware = require("../middlewares/auth");
 
 const router = express.Router();
 
 const secret = process.env.JWT_SECRET;
 const emailroot = process.env.ADMIN_EMAIL;
 
-router.get("/", async (req, res) => {
+
+router.get("/", authMiddleware, async (req, res) => {
   try {
     const conn = getConn();
 
