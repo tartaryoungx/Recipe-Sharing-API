@@ -8,6 +8,7 @@ const { initMySQL } = require("./db");
 const authRoutes = require("./routes/auth.routes");
 const userRoutes = require("./routes/user.routes");
 const recipeRoutes = require('./routes/recipe.routes')
+const ingredientRoutes = require('./routes/ingredient.routes')
 
 const app = express();
 const port = 8000;
@@ -21,6 +22,7 @@ app.get("/", (req, res) => {
 app.use("/api", authRoutes);
 app.use("/api/users", userRoutes);
 app.use('/api', recipeRoutes)
+app.use('/api/ingredients', ingredientRoutes)
 app.use(errorMiddleware);
 
 app.listen(port, async () => {
