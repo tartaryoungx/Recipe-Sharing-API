@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+<header class="site-header">
+      <div class="container header-inner">
+        <h1 class="logo">Recipe App</h1>
+
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/recipes">Recipes</a>
+          <a href="/recipes/create">Create</a>
+          <a href="/profile">Profile</a>
+          <a href="/admin/dashboard">Admin</a>
+          <a href="/auth/signin">Sign In</a>
+          <a href="/auth/signup" class="nav-button">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container page">
+  <section class="card profile-card">
+    <div class="avatar">M</div>
+
+    <div class="profile-info">
+      <p class="eyebrow">Profile</p>
+      <h2>Mali</h2>
+      <p class="muted">Recipe creator who loves simple home cooking.</p>
+
+      <div class="profile-actions">
+        <a href="/recipes/create" class="button primary">Create Recipe</a>
+        <a href="/recipes" class="button secondary">My Recipes</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="recipe-grid profile-recipes">
+    <article class="recipe-card">
+      <div class="recipe-image"></div>
+      <div class="recipe-content">
+        <h3>Garlic Fried Rice</h3>
+        <p>Easy fried rice with garlic, egg, and simple seasoning.</p>
+        <a class="recipe-link" href="/recipes/1">View Recipe</a>
+      </div>
+    </article>
+  </section>
+</main>
+  </body>
+</html>

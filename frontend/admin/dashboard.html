@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="logo">Recipe App</h1>
+
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/recipes">Recipes</a>
+          <a href="/recipes/create">Create</a>
+          <a href="/profile">Profile</a>
+          <a href="/admin/dashboard">Admin</a>
+          <a href="/auth/signin">Sign In</a>
+          <a href="/auth/signup" class="nav-button">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container page">
+  <div class="page-header">
+    <div>
+      <p class="eyebrow">Admin Panel</p>
+      <h2>Dashboard</h2>
+    </div>
+  </div>
+
+  <section class="dashboard-grid">
+    <div class="card stat-card">
+      <span class="stat-number">100</span>
+      <span class="stat-label">Recipes</span>
+    </div>
+
+    <div class="card stat-card">
+      <span class="stat-number">50</span>
+      <span class="stat-label">Users</span>
+    </div>
+
+    <div class="card stat-card">
+      <span class="stat-number">320</span>
+      <span class="stat-label">Comments</span>
+    </div>
+  </section>
+
+  <section class="card table-card">
+    <h3>Recent Recipes</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Recipe</th>
+          <th>Author</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Spicy Basil Chicken</td>
+          <td>admin</td>
+          <td>Published</td>
+        </tr>
+
+        <tr>
+          <td>Simple Pasta</td>
+          <td>mali</td>
+          <td>Published</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+  </body>
+</html>

@@ -2,7 +2,6 @@
 services:
   db:
     image: mysql:8.0.39
-    container_name: mysql_db
     command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
@@ -16,7 +15,6 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:5.2
-    container_name: phpmyadmin
     environment:
       PMA_HOST: db
       PMA_PORT: 3306

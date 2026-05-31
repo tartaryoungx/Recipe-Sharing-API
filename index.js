@@ -1,6 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const errorMiddleware = require("./middlewares/error");
+const path = require("path");
 
 dotenv.config();
 
@@ -14,14 +15,49 @@ const app = express();
 const port = 8000;
 
 app.use(express.json());
+app.use(express.static("frontend"));
 
-app.get("/", (req, res) => {
-  res.send("Backend is running");
+app.get("/recipes/create", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "frontend/recipes/create.html")
+  );
+});
+
+app.get("/auth/signin", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "frontend/auth/signin.html")
+  );
+});
+
+app.get("/auth/signup", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "frontend/auth/signup.html")
+  );
+});
+
+app.get("/admin/dashboard", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "frontend/admin/dashboard.html")
+  );
+});
+
+app.get("/recipes/:slug", (req, res) => {
+
+  const slug = req.params.slug;
+
+  res.sendFile(
+    path.join(
+      __dirname,
+      "frontend",
+      "recipes",
+      "detail.html"
+    )
+  );
 });
 
 app.use("/api", authRoutes);
 app.use("/api/users", userRoutes);
-app.use('/api', recipeRoutes)
+app.use('/api/recipes', recipeRoutes)
 app.use('/api/ingredients', ingredientRoutes)
 app.use(errorMiddleware);
 
